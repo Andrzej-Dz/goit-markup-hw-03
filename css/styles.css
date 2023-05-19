@@ -1,0 +1,209 @@
+/*Standardowym modelem blokowym w nowoczesnych projektach jest border-box aby uniknąć ustawiania
+ręcznie właściwości box-sizing: border-box; w każdym elemencie użyj poniższego kodu CSS na samym początku arkusza stylów.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --kolor-domyslny: #212121;
+  --kolor-logo: #2196f3;
+  --kolor-kontakt: #757575;
+  --kolor-przycisk-nieaktywny: #f5f4fa;
+  --kolor-stopka: #2f303a;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: lightGray;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.ogloszenie {
+  text-align: center;
+  background-color: var(--kolor-stopka);
+  padding-top: 200px;
+  padding-bottom: 280px;
+}
+
+.strona {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stopka {
+  background-color: var(--kolor-stopka);
+  color: white;
+  padding: 60px 215px;
+  margin-top: 0px;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: var(--kolor-logo);
+}
+
+.logo .logo-stopka-gora {
+  color: var(--kolor-domyslny);
+}
+
+.logo > .logo-stopka-dol {
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--kolor-domyslny);
+}
+
+.link:visited {
+  color: var(--kolor-domyslny);
+}
+
+.link:hover {
+  color: var(--kolor-logo);
+}
+
+.kontakt {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--kolor-kontakt);
+}
+
+.kontakt-adres {
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.kontakt-adres:hover {
+  text-decoration-color: var(--kolor-logo);
+}
+
+.kontakt-stopka {
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.kontakt:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--kolor-logo);
+}
+
+.tabela-przyciskow {
+  padding-top: 94px;
+  padding-bottom: 50px;
+  border-spacing: 8px;
+  border-collapse: separate;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.przycisk {
+  height: 38px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--kolor-domyslny);
+  background: var(--kolor-przycisk-nieaktywny);
+  border-radius: 4px;
+  border-width: 1px;
+  padding: 6px 22px;
+}
+
+.przycisk:hover {
+  border-color: var(--kolor-logo);
+  border-width: 1px;
+}
+
+.przycisk-aktywny {
+  color: white;
+  background: var(--kolor-logo);
+  border-width: 1px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.przycisk-aktywny :hover {
+  border-color: var(--kolor-logo);
+  border-width: 1px;
+}
+
+.tabela-obrazkow {
+  border-spacing: 30px;
+  border-collapse: separate;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 94px;
+}
+
+.obraz {
+  width: 370px;
+  height: 294px;
+}
+
+.obraz-tytul {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.obraz-opis {
+  padding-left: 24px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
