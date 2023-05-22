@@ -1,18 +1,12 @@
-/*Standardowym modelem blokowym w nowoczesnych projektach jest border-box aby uniknąć ustawiania
-ręcznie właściwości box-sizing: border-box; w każdym elemencie użyj poniższego kodu CSS na samym początku arkusza stylów.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 :root {
   --kolor-domyslny: #212121;
   --kolor-logo: #2196f3;
   --kolor-kontakt: #757575;
   --kolor-przycisk-nieaktywny: #f5f4fa;
   --kolor-stopka: #2f303a;
+  --kolor-margines-poziomy: #ececec;
+  --kolor-tlo: #e5e5e5;
+  --kolor-ramki-zdjec: #eeeeee;
 }
 
 * {
@@ -21,7 +15,7 @@ ręcznie właściwości box-sizing: border-box; w każdym elemencie użyj poniż
 }
 
 body {
-  background-color: lightGray;
+  background-color: white;
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
@@ -42,6 +36,50 @@ h1 {
   color: white;
 }
 
+img {
+  display: block;
+
+}
+
+.strona {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.odstep-sekcji {
+  padding: 94px 0px;
+}
+
+.odstep-sekcji-dolny {
+  padding-bottom: 94px;
+}
+
+.sekcja-naglowek {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;  
+  color: #212121;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.naglowek {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.stopka {
+  background-color: var(--kolor-stopka);
+  color: white;
+  padding: 60px 15px;
+}
+
 .ogloszenie {
   text-align: center;
   background-color: var(--kolor-stopka);
@@ -49,17 +87,8 @@ h1 {
   padding-bottom: 280px;
 }
 
-.strona {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.stopka {
-  background-color: var(--kolor-stopka);
-  color: white;
-  padding: 60px 215px;
-  margin-top: 0px;
+.odstep {
+  border-bottom: 1px solid var(--kolor-margines-poziomy);
 }
 
 .logo {
@@ -71,6 +100,10 @@ h1 {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--kolor-logo);
+}
+
+.logo-margines-lewy {
+padding-left:15px
 }
 
 .logo .logo-stopka-gora {
@@ -126,21 +159,19 @@ h1 {
   font-weight: 400;
 }
 
-.kontakt:hover {
-  text-decoration: underline;
+/* .kontakt:hover {
   text-decoration-color: var(--kolor-logo);
-}
+} */
 
-.tabela-przyciskow {
-  padding-top: 94px;
+.wiersz-przyciskow {
   padding-bottom: 50px;
-  border-spacing: 8px;
-  border-collapse: separate;
-  margin-left: auto;
-  margin-right: auto;
-}
+  display: flex; 
+  gap: 8px;
+  justify-content: center;
+  }
 
 .przycisk {
+  
   height: 38px;
   font-family: "Roboto";
   font-style: normal;
@@ -154,6 +185,29 @@ h1 {
   border-radius: 4px;
   border-width: 1px;
   padding: 6px 22px;
+}
+
+.przycisk-usluga {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  /* align-items: center;
+  text-align: center; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  padding-right: 41px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.06em;
+  color: #FFFFFF
+  background: var(--kolor-logo);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
 }
 
 .przycisk:hover {
@@ -175,11 +229,31 @@ h1 {
 }
 
 .tabela-obrazkow {
-  border-spacing: 30px;
+  /* border-spacing: 30px; */
   border-collapse: separate;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 94px;
+}
+
+.wiersz-obrazow {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.kolumna-obrazow {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wiersz-obrazow div div {
+  border: 1px solid var(--kolor-ramki-zdjec);
+}
+
+.wiersz-obrazow figure {
+  border: 1px solid green;
+  /* var(--kolor-ramki-zdjec); */
 }
 
 .obraz {
@@ -206,4 +280,25 @@ h1 {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.obraz-zespol-tytul {
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 0.03em;
+color: #757575
+margin-top: 10px;
+pmargin-bottom: 30px;
+}
+
+.obraz-zespol-imie {
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
+margin-top: 30px;
 }
