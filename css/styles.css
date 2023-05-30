@@ -165,7 +165,8 @@ padding-left:15px
   font-weight: 400;
 }
 
-.kontakt:hover {
+.kontakt:hover,
+.kontakt:focus {
   color: var(--kolor-logo);
 }
 
