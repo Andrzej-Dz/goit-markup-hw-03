@@ -155,7 +155,8 @@ padding-left:15px
   color: #ffffff;
 }
 
-.kontakt-adres:hover {
+.kontakt-adres:hover,
+.kontakt-adres:focus {
   text-decoration-color: var(--kolor-logo);
 }
 
@@ -164,9 +165,9 @@ padding-left:15px
   font-weight: 400;
 }
 
-/* .kontakt:hover {
-  text-decoration-color: var(--kolor-logo);
-} */
+.kontakt:hover {
+  color: var(--kolor-logo);
+}
 
 .wiersz-przyciskow {
   padding-bottom: 50px;
@@ -200,9 +201,6 @@ padding-left:15px
   border-radius: 4px;
 }
 
-
-}
-
 .przycisk-usluga {
   font-family: 'Roboto';
   font-style: normal;
@@ -220,7 +218,7 @@ padding-left:15px
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0.06em;
-  color: #FFFFFF
+  color: #FFFFFF;
   background: var(--kolor-logo);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
